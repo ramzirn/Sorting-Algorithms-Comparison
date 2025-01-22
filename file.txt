@@ -4,3 +4,5 @@
 ./RadixSort
 ./QuickSort
 ./HeapSort
+
+test
