@@ -1,0 +1,6 @@
+./BubbleSort
+./BubbleSortOpt
+./GnomeSort
+./RadixSort
+./QuickSort
+./HeapSort
