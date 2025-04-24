@@ -2,12 +2,14 @@
 #include <time.h>
 #include <stdlib.h>
 
+// Swap two integers
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
+// Heapify a subtree
 void heapify(int arr[], int n, int i) {
     int largest = i;
     int left = 2 * i + 1;
@@ -25,10 +27,13 @@ void heapify(int arr[], int n, int i) {
     }
 }
 
+// Heap Sort algorithm
 void heapSort(int arr[], int n) {
+    // Build the max heap
     for (int i = n / 2 - 1; i >= 0; i--)
         heapify(arr, n, i);
 
+    // Extract elements from the heap one by one
     for (int i = n - 1; i > 0; i--) {
         swap(&arr[0], &arr[i]);
         heapify(arr, i, 0);
@@ -36,13 +41,13 @@ void heapSort(int arr[], int n) {
 }
 
 int main() {
-    int n = 1000000; // Taille du tableau
+    int n = 1000000; 
     int arr[n];
-    srand(time(NULL)); // Initialisation de la graine pour rand()
+    srand(time(NULL)); 
 
-    // Remplissage du tableau avec des valeurs aléatoires
+    // Populate array with random numbers between 0 and 999 999
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 1000000; // Valeurs entre 0 et 999 999
+        arr[i] = rand() % 1000000; 
     }
 
     clock_t start = clock();

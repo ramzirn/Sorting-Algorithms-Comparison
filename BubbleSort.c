@@ -3,34 +3,39 @@
 #include <time.h>
 #include <stdlib.h>
 
+// Swap two integers in array
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
+// Bubble sort algorithm
 void bubbleSort(int arr[], int n) {
+    // Keep track of whether any swaps were made in the current iteration
     bool changed;
     for (int i = 0; i < n-1; i++) {
         changed = false;
+        // Iterate through array and compare adjacent elements
         for (int j = 0; j < n-i-1; j++) {
             if (arr[j] > arr[j+1]) {
                 swap(&arr[j], &arr[j+1]);
                 changed = true;
             }
         }
-        if (!changed) break; // Si aucun échange n'a eu lieu, le tableau est trié
+        // If no swaps were made, the array is already sorted
+        if (!changed) break; 
     }
 }
 
 int main() {
-    int n = 10000; // Taille du tableau
+    int n = 10000; 
     int arr[n];
-    srand(time(NULL)); // Initialisation de la graine pour rand()
+    srand(time(NULL)); 
 
-    // Remplissage du tableau avec des valeurs aléatoires
+    // Populate array with random numbers between 0 and 99 999
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 100000; // Valeurs entre 0 et 99 999
+        arr[i] = rand() % 100000; 
     }
 
     clock_t start = clock();

@@ -2,12 +2,14 @@
 #include <time.h>
 #include <stdlib.h>
 
+// Swap two integers
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
+// Partition the array for Quick Sort
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
@@ -21,6 +23,7 @@ int partition(int arr[], int low, int high) {
     return i+1;
 }
 
+// Quick Sort algorithm
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
@@ -30,13 +33,12 @@ void quickSort(int arr[], int low, int high) {
 }
 
 int main() {
-    int n = 1000000; // Taille du tableau
+    int n = 10000; 
     int arr[n];
-    srand(time(NULL)); // Initialisation de la graine pour rand()
+    srand(time(NULL)); 
 
-    // Remplissage du tableau avec des valeurs aléatoires
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 1000000; // Valeurs entre 0 et 999 999
+        arr[i] = rand() % 10000; 
     }
 
     clock_t start = clock();

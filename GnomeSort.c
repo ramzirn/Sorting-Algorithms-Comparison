@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 
+// Gnome Sort algorithm
 void gnomeSort(int arr[], int n) {
     int index = 0;
     while (index < n) {
@@ -17,14 +18,15 @@ void gnomeSort(int arr[], int n) {
 }
 
 int main() {
-    int n = 10000; // Taille du tableau
+    int n = 10000; 
     int arr[n];
-    srand(time(NULL)); // Initialisation de la graine pour rand()
+    srand(time(NULL)); 
 
-    // Remplissage du tableau avec des valeurs aléatoires
+    // Populate array with random numbers between 0 and 99 999
     for (int i = 0; i < n; i++) {
-        arr[i] = rand() % 100000; // Valeurs entre 0 et 99 999
+        arr[i] = rand() % 100000; 
     }
+    int demo[20] = {12, 23, 23, 23, 33, 32};
 
     clock_t start = clock();
     gnomeSort(arr, n);
@@ -32,6 +34,7 @@ int main() {
 
     double time_taken = ((double)(end - start)) / CLOCKS_PER_SEC;
 
+    // Output the time taken
     printf("Time taken (Gnome Sort): %f seconds\n", time_taken);
 
     return 0;
