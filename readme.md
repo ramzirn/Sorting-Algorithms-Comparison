@@ -27,13 +27,17 @@ You can compile all programs using the provided `Makefile`. Just run:
 
 ```bash
 make
+```
 
 To clean all compiled binaries:
-make clean
 
+```bash
+make clean
+```
 
 Or compile manually if preferred:
 
+```bash
 gcc -o BubbleSort BubbleSort.c
 gcc -o BubbleSortOpt BubbleSortOpt.c
 gcc -o GnomeSort GnomeSort.c
@@ -41,10 +45,13 @@ gcc -o RadixSort RadixSort.c
 gcc -o QuickSort QuickSort.c
 gcc -o HeapSort HeapSort.c
 
+```
 
+## 🚀 Execution
 
 Once compiled, each program can be executed directly from the terminal:
 
+```bash
 ./BubbleSort
 ./BubbleSortOpt
 ./GnomeSort
@@ -52,8 +59,9 @@ Once compiled, each program can be executed directly from the terminal:
 ./QuickSort
 ./HeapSort
 
+```
 
-📈 Purpose
+## 📈 Purpose
 
 This project aims to:
 
@@ -71,7 +79,7 @@ You’re encouraged to:
 
     Visualize results in a spreadsheet or graphing tool
 
-📂 Project Structure
+## 📂 Project Structure
 
 ├── BubbleSort.c
 ├── BubbleSortOpt.c
@@ -83,24 +91,7 @@ You’re encouraged to:
 ├── .gitignore
 └── README.md
 
-🧼 Clean Git Repo
-
-Executables (BubbleSort, QuickSort, etc.) and .txt files are ignored via .gitignore.
-To remove already-tracked files from Git while keeping them locally, use:
-
-git rm --cached <filename>
-
-📄 License
-
-This project is licensed under the MIT License.
-Feel free to use, modify, and share as you wish. Contributions welcome!
-🙌 Author
+## 🙌 Author
 
 Made with ❤️ and C.
 Feel free to open issues or PRs to improve or extend the project.
-
-
----
-
-Tu peux coller ce bloc tel quel dans un fichier `README.md` ! Si tu veux aussi un logo, une capture d'
-```
