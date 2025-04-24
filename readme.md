@@ -79,18 +79,6 @@ You’re encouraged to:
 
     Visualize results in a spreadsheet or graphing tool
 
-## 📂 Project Structure
-
-├── BubbleSort.c
-├── BubbleSortOpt.c
-├── GnomeSort.c
-├── RadixSort.c
-├── QuickSort.c
-├── HeapSort.c
-├── Makefile
-├── .gitignore
-└── README.md
-
 ## 🙌 Author
 
 Made with ❤️ and C.
