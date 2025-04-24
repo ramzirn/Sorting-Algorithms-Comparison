@@ -1,8 +1,8 @@
 .vscode/
-/BubbleSort
-/BubbleSortOpt
+BubbleSort
+BubbleSortOpt
 GnomeSort
-/RadixSort
-/QuickSort
-/HeapSort
-
+RadixSort
+QuickSort
+HeapSort
+QuickSort
